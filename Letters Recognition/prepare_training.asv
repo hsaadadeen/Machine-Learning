@@ -1,0 +1,11 @@
+%% Prepare training for Hs to binary image matrix
+n = 1;   %number of images
+for a = 1:n
+    filename = ['Hs\h' num2str(a) '.png'];
+    training_h{a} = imread(filename);
+    tr_bw_h{a} = im2bw(training_h{a});
+end
+
+for a = 1:n
+    tr_cen_h{a} = mean(tr_bw_h{a},level);
+end

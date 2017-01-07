@@ -1,0 +1,6 @@
+%% Initialize variable
+n = 5;   %number of training images
+
+%% main
+prepare_test;
+prepare_training;
